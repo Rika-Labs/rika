@@ -25,7 +25,7 @@ This exists because AI makes it trivial to generate plausible-looking but low-qu
 ## Before Submitting a PR
 
 ```bash
-npm run check  # must pass with no errors
+bun run check  # must pass with no errors
 ./test.sh      # must pass
 ```
 

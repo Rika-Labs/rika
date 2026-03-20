@@ -5,7 +5,7 @@ Stateful agent with tool execution and event streaming. Built on `@mariozechner/
 ## Installation
 
 ```bash
-npm install @mariozechner/pi-agent-core
+bun add @mariozechner/pi-agent-core
 ```
 
 ## Quick Start

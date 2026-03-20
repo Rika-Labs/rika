@@ -5,13 +5,13 @@ This is a minimal example showing how to use `@mariozechner/pi-web-ui` in a web 
 ## Setup
 
 ```bash
-npm install
+bun install
 ```
 
 ## Development
 
 ```bash
-npm run dev
+bun run dev
 ```
 
 Open [http://localhost:5173](http://localhost:5173) in your browser.

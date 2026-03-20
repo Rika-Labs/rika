@@ -17,7 +17,7 @@ Built with [mini-lit](https://github.com/badlogic/mini-lit) web components and T
 ## Installation
 
 ```bash
-npm install @mariozechner/pi-web-ui @mariozechner/pi-agent-core @mariozechner/pi-ai
+bun add @mariozechner/pi-web-ui @mariozechner/pi-agent-core @mariozechner/pi-ai
 ```
 
 ## Quick Start

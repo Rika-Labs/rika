@@ -14,7 +14,7 @@
 		"build": "tsgo -p tsconfig.build.json",
 		"dev": "tsgo -p tsconfig.build.json --watch --preserveWatchOutput",
 		"test": "vitest --run",
-		"prepublishOnly": "npm run clean && npm run build"
+		"prepublishOnly": "bun run clean && bun run build"
 	},
 	"dependencies": {
 		"@mariozechner/pi-ai": "^0.60.0"
@@ -37,8 +37,8 @@
 		"node": ">=20.0.0"
 	},
 	"devDependencies": {
-		"@types/node": "^24.3.0",
-		"typescript": "^5.7.3",
-		"vitest": "^3.2.4"
+		"@types/node": "24.3.0",
+		"typescript": "5.7.3",
+		"vitest": "3.2.4"
 	}
 }

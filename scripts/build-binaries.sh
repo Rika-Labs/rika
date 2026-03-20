@@ -56,15 +56,14 @@ if [[ -n "$PLATFORM" ]]; then
 fi
 
 echo "==> Installing dependencies..."
-npm ci
+bun install --frozen-lockfile
 
 if [[ "$SKIP_DEPS" == "false" ]]; then
     echo "==> Installing cross-platform native bindings..."
-    # npm ci only installs optional deps for the current platform
+    # bun install only installs optional deps for the current platform
     # We need all platform bindings for bun cross-compilation
-    # Use --force to bypass platform checks (os/cpu restrictions in package.json)
-    # Install all in one command to avoid npm removing packages from previous installs
-    npm install --no-save --force \
+    # Install all in one command using broad os/cpu targets so Bun keeps the packages
+    bun install --no-save --force --os='*' --cpu='*' \
         @mariozechner/clipboard-darwin-arm64@0.3.0 \
         @mariozechner/clipboard-darwin-x64@0.3.0 \
         @mariozechner/clipboard-linux-x64-gnu@0.3.0 \
@@ -84,7 +83,7 @@ else
 fi
 
 echo "==> Building all packages..."
-npm run build
+bun run build
 
 echo "==> Building binaries..."
 cd packages/coding-agent
